@@ -9,14 +9,18 @@ node_modules/
 *.zip
 
 # temp ignore
-bin/*
-tests/*
+.distignore
+.editorconfig
+.phpcs.xml.dist
+.travis.yml
+Gruntfile.js
+bin/
+tests/
 package.json
 package.lock
 node_modules
 phpunit.xml.dist
 travis.yml
-Gruntfie.js
 
 # Created by https://www.gitignore.io/api/composer,phpcodesniffer
 # Edit at https://www.gitignore.io/?templates=composer,phpcodesniffer
