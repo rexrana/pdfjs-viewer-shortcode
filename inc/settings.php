@@ -1,6 +1,6 @@
 <?php
 add_action( 'admin_menu', 'pdfjs_viewer_add_admin_menu' );
-add_action( 'admin_init', 'pdfjs_viewer_settings_init' );
+add_action( 'admin_init', 'pdfjs_settings_init' );
 
 
 function pdfjs_viewer_add_admin_menu(  ) { 
@@ -17,21 +17,21 @@ function pdfjs_viewer_add_admin_menu(  ) {
 }
 
 
-function pdfjs_viewer_settings_init(  ) { 
+function pdfjs_settings_init(  ) { 
 
-	register_setting( 'pdfjs_options', 'pdfjs_viewer_settings' );
+	register_setting( 'pdfjs_options', 'pdfjs_settings' );
 
 	add_settings_section(
 		'pdfjs_viewer_pdfjs_options_section', 
 		__( 'PDF.js Viewer Settings', 'pdfjs-viewer-shortcode' ), 
-		'pdfjs_viewer_settings_section_callback', 
+		'pdfjs_settings_section_callback', 
 		'pdfjs_options'
 	);
 
 	add_settings_field( 
-		'pdfjs_viewer_remote_url', 
+		'pdfjs_remote_viewer', 
 		__( 'Remote viewer URL', 'pdfjs-viewer-shortcode' ), 
-		'pdfjs_viewer_remote_url_render', 
+		'pdfjs_remote_viewer_render', 
 		'pdfjs_options', 
 		'pdfjs_viewer_pdfjs_options_section' 
 	);
@@ -40,11 +40,11 @@ function pdfjs_viewer_settings_init(  ) {
 }
 
 
-function pdfjs_viewer_remote_url_render(  ) { 
+function pdfjs_remote_viewer_render(  ) { 
 
-	$options = get_option( 'pdfjs_viewer_settings' );
+	$options = get_option( 'pdfjs_settings' );
 	?>
-	<input size="50" style="width: 60%" type="text" name="pdfjs_viewer_settings[pdfjs_viewer_remote_url]" value="<?php echo $options['pdfjs_viewer_remote_url']; ?>">
+	<input size="50" style="width: 60%" type="text" name="pdfjs_settings[pdfjs_remote_viewer]" value="<?php echo $options['pdfjs_remote_viewer']; ?>">
 	<div style="margin: .5em 0; font-style: italic">
 	<?php esc_html_e( 'Override the local PDF.js viewer with a remote viewer. Useful if you are using a CDN.', 'pdfjs-viewer-shortcode' ); ?><br>
 	<?php esc_html_e( 'i.e. https://mozilla.github.io/pdf.js/web/viewer.html', 'pdfjs-viewer-shortcode' ); ?><br>
@@ -55,7 +55,7 @@ function pdfjs_viewer_remote_url_render(  ) {
 }
 
 
-function pdfjs_viewer_settings_section_callback(  ) { 
+function pdfjs_settings_section_callback(  ) { 
 
 
 }
