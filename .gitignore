@@ -1,0 +1,39 @@
+.DS_Store
+phpcs.xml
+phpunit.xml
+Thumbs.db
+wp-cli.local.yml
+node_modules/
+*.sql
+*.tar.gz
+*.zip
+
+# temp ignore
+bin/*
+tests/*
+package.json
+package.lock
+node_modules
+phpunit.xml.dist
+travis.yml
+Gruntfie.js
+
+# Created by https://www.gitignore.io/api/composer,phpcodesniffer
+# Edit at https://www.gitignore.io/?templates=composer,phpcodesniffer
+
+### Composer ###
+composer.phar
+/vendor/
+
+# Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
+# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
+# composer.lock
+
+### PHPCodeSniffer ###
+# CodeSniffer
+
+/vendor/*
+/wpcs/*
+
+# End of https://www.gitignore.io/api/composer,phpcodesniffer
+
