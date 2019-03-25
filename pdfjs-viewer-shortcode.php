@@ -18,4 +18,5 @@ define( 'PDFJS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 require_once( PDFJS_PLUGIN_DIR . 'inc/settings.php' );
 require_once( PDFJS_PLUGIN_DIR . 'inc/shortcode.php' );
+require_once( PDFJS_PLUGIN_DIR . 'inc/media-button.php' );
 
