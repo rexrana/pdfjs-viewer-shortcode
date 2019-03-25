@@ -1,0 +1,15 @@
+{
+    "name": "rexrana/pdfjs-viewer-shortcode",
+    "description": "Embed PDFs with the gorgeous PDF.js viewer",
+    "type": "wordpress-plugin",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Peter Hebert",
+            "email": "peter@peterhebert.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    }
+}

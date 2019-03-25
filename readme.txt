@@ -3,7 +3,7 @@ Contributors: Peter Hebert
 Tags: pdf, pdf.js, viewer, reader, embed, mozilla, shortcode
 Requires at least: 3.0.1
 Tested up to: 5.1.1
-Stable tag: 1.4
+Stable tag: 1.4.0
 
 Embed a beautiful PDF viewer into pages with a simple shortcode.
 
