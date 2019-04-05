@@ -44,3 +44,18 @@ Optional parameters:
 Upload and expand the archive into your sites wp-content/plugins directory
 
 == Screenshots ==
+
+== Changelog ==
+
+= 1.4.2 =
+* fix to javascript for classic editor "Insert PDF" button, avoiding double-escaping file URL.
+
+= 1.4.1 =
+* fix to javascript for classic editor "Insert PDF" button, updating shortcode parameters to their new names.
+
+= 1.4.0 =
+* Composer support
+* updated shortcode functions with proper sanitization and escaping
+* added plugin settings page for setting remote viewer URL
+* split functions into seperate files in inc folder
+* restructure file paths

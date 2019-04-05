@@ -12,7 +12,6 @@ jQuery(function($) {
 
         frame.on('select', function(){
 	        var selectionURL = frame.state().get('selection').first().toJSON().url;
-	        selectionURL = encodeURIComponent(selectionURL);
 	        wp.media.editor.insert('[pdfjs-viewer file="' + selectionURL + '"  width="600px" height="700px" fullscreen="true" download="true" print="true"]');
 	    });
 
