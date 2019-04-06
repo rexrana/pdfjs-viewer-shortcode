@@ -64,12 +64,10 @@ function pdfjs_remote_viewer_render() {
 	?>
 	<input size="50" style="width: 60%" type="text" name="pdfjs_settings[pdfjs_remote_viewer]" value="<?php echo esc_attr( $options['pdfjs_remote_viewer'] ); ?>">
 	<div style="margin: .5em 0; font-style: italic">
-	<?php esc_html_e( 'Override the local PDF.js viewer with a remote viewer. Useful if you are using a CDN.', 'pdfjs-viewer-shortcode' ); ?><br>
-	<?php esc_html_e( 'i.e. https://mozilla.github.io/pdf.js/web/viewer.html', 'pdfjs-viewer-shortcode' ); ?><br>
-
+	<?php esc_html_e( 'Override the local PDF.js viewer with a remote viewer. Useful if you are syncynig a CDN for your media library. The viewer must be on the same domain as the PDF files.', 'pdfjs-viewer-shortcode' ); ?><br>
+	<?php esc_html_e( 'i.e. https://my-media-subdomain.example.com/pdf.js/web/viewer.html', 'pdfjs-viewer-shortcode' ); ?><br>
 	</div>
 	<?php
-
 }
 
 /**
@@ -92,15 +90,11 @@ function pdfjs_viewer_options_page() {
 
 	?>
 	<form action='options.php' method='post'>
-
-		<!-- <h2>pdfjs-viewer-shortcode</h2> -->
-
 		<?php
 		settings_fields( 'pdfjs_options' );
 		do_settings_sections( 'pdfjs_options' );
 		submit_button();
 		?>
-
 	</form>
 	<?php
 
