@@ -63,6 +63,10 @@ Works best in a [Roots Bedrock](https://roots.io/bedrock/) stack
 
 ## Changelog ##
 
+### 1.5.0 ###
+* Added shortcode mapping for WPBakery Page Builder (Visual Composer)
+* Integrate media library with insert dialog with WPBakery Page Builder 
+
 ### 1.4.3 ###
 * better sanitization of html attributes for iframe
 * more useful instructions for settings page
