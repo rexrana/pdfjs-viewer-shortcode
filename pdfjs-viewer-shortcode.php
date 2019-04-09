@@ -16,7 +16,11 @@
 define( 'PDFJS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'PDFJS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
-require_once( PDFJS_PLUGIN_DIR . 'inc/settings.php' );
-require_once( PDFJS_PLUGIN_DIR . 'inc/shortcode.php' );
-require_once( PDFJS_PLUGIN_DIR . 'inc/media-button.php' );
-require_once( PDFJS_PLUGIN_DIR . 'inc/vc-map.php' );
+require_once PDFJS_PLUGIN_DIR . 'inc/settings.php';
+require_once PDFJS_PLUGIN_DIR . 'inc/shortcode.php';
+require_once PDFJS_PLUGIN_DIR . 'inc/media-button.php';
+
+// load WPBakery support if it is present.
+if ( class_exists( 'Vc_Manager' ) && defined( 'WPB_VC_VERSION' ) ) {
+	require_once PDFJS_PLUGIN_DIR . 'inc/vc-map.php';
+}
