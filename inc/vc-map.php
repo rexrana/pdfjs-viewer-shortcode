@@ -29,16 +29,18 @@ function pdfjs_vc_map_shortcode()
                 "description" => esc_html__( 'Choose a PDF file to embed', 'pdfjs-viewer-shortcode' ),
                 "type" => "pdf_media_browser",
                 "value" => "",
+                "admin_label" => true,
             ),
 
             array(
                 "param_name" => "width",
                 "heading" => __("Width", "pdfjs-viewer-shortcode"),
-                "description" => __("Width of viewer i.e. 600px", "pdfjs-viewer-shortcode"),
+                "description" => __("Width of viewer i.e. 100%, 600px", "pdfjs-viewer-shortcode"),
                 "type" => "textfield",
                 "value" => "100%",
                 "holder" => "div",
                 "class" => "",
+                "admin_label" => true,
             ),
 
             array(
@@ -49,16 +51,7 @@ function pdfjs_vc_map_shortcode()
                 "heading" => __("Height", "pdfjs-viewer-shortcode"),
                 "value" => "700px",
                 "description" => __("Height of viewer i.e. 700px", "pdfjs-viewer-shortcode"),
-            ),
-
-            array(
-                "param_name" => "height",
-                "type" => "textfield",
-                "holder" => "div",
-                "class" => "",
-                "heading" => __("Height", "pdfjs-viewer-shortcode"),
-                "value" => "700px",
-                "description" => __("Height of viewer i.e. 700px", "pdfjs-viewer-shortcode"),
+                "admin_label" => true,
             ),
 
             array(
@@ -68,6 +61,7 @@ function pdfjs_vc_map_shortcode()
                 "class" => "",
                 "heading" => __("Full Screen", "pdfjs-viewer-shortcode"),
                 "value" => ['true','false'],
+                "admin_label" => true,
             ),
 
             array(
@@ -75,8 +69,9 @@ function pdfjs_vc_map_shortcode()
                 "type" => "dropdown",
                 "holder" => "div",
                 "class" => "",
-                "heading" => __("Allow download", "pdfjs-viewer-shortcode"),
+                "heading" => __("Allow download?", "pdfjs-viewer-shortcode"),
                 "value" => ['true','false'],
+                "admin_label" => true,
             ),
 
             array(
@@ -86,6 +81,7 @@ function pdfjs_vc_map_shortcode()
                 "class" => "",
                 "heading" => __("Allow Printing?", "pdfjs-viewer-shortcode"),
                 "value" => ['true','false'],
+                "admin_label" => true,
             ),
 
         ),
