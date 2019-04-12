@@ -3,7 +3,7 @@ Contributors: Peter Hebert
 Tags: pdf, pdf.js, viewer, reader, embed, mozilla, shortcode
 Requires at least: 3.0.1
 Tested up to: 5.1.1
-Stable tag: 1.4.3
+Stable tag: 1.5.1
 
 Embed a beautiful PDF viewer into pages with a simple shortcode.
 
@@ -63,7 +63,10 @@ Works best in a [Roots Bedrock](https://roots.io/bedrock/) stack
 
 == Changelog ==
 
-### 1.5.0 ###
+= 1.5.1 =
+* Added wrapper div around shortcode output
+
+= 1.5.0 =
 * Added shortcode mapping for WPBakery Page Builder (Visual Composer)
 * Integrate media library with insert dialog with WPBakery Page Builder 
 
