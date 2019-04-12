@@ -47,9 +47,7 @@ add_shortcode( 'pdfjs-viewer', 'pdfjs_viewer_shortcode' );
 function pdfjs_viewer_print_from_atts( $atts ) {
 
 	// setup array for HTML attributes.
-	$html_attributes = [
-		'class' => 'pdfjs-viewer',
-	];
+	$html_attributes = [];
 
 	// determine PDF.js viewer base url.
 	$viewer_url     = PDFJS_PLUGIN_URL . 'pdfjs/web/viewer.php';
@@ -73,7 +71,7 @@ function pdfjs_viewer_print_from_atts( $atts ) {
 	$html_attributes['width']  = ( array_key_exists( 'width', $atts ) && pdfjs_viewer_valid_css_length( $atts['width'] ) ) ? $atts['width'] : '100%';
 	$html_attributes['height'] = ( array_key_exists( 'height', $atts ) && pdfjs_viewer_valid_css_length( $atts['height'] ) ) ? $atts['height'] : '700px';
 
-	$code = '';
+	$code = '<div class="pdfjs-viewer">';
 
 	if ( 'true' === $atts['fullscreen'] ) {
 		$code .= sprintf( '<div class="pdfjs-fs"><a href="%1$s">%2$s</a></div>', $atts['file'], __( 'View Fullscreen', 'pdfjs-viewer-shortcode' ) );
@@ -83,6 +81,7 @@ function pdfjs_viewer_print_from_atts( $atts ) {
 		'<iframe %s></iframe>',
 		pdfjs_viewer_attributes( $html_attributes )
 	);
+	$code .= '</div>';
 
 	return $code;
 
