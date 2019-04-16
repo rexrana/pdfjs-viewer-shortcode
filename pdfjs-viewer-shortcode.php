@@ -7,7 +7,7 @@
  * Author URI:      https://rexrana.ca/
  * Text Domain:     pdfjs-viewer-shortcode
  * Domain Path:     /languages
- * Version:         1.5.1
+ * Version:         1.5.2
  * License:         GPLv2
  *
  * @package         Pdfjs_Viewer_Shortcode
