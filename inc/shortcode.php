@@ -33,7 +33,7 @@ function pdfjs_viewer_shortcode( $atts ) {
 	$viewer = pdfjs_viewer_print_from_atts( $atts );
 
 	// phpcs:ignore
-	echo $viewer;
+	return $viewer;
 
 }
 add_shortcode( 'pdfjs-viewer', 'pdfjs_viewer_shortcode' );
