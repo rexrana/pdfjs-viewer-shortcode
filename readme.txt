@@ -3,7 +3,7 @@ Contributors: Peter Hebert
 Tags: pdf, pdf.js, viewer, reader, embed, mozilla, shortcode
 Requires at least: 3.0.1
 Tested up to: 5.1.1
-Stable tag: 1.5.2
+Stable tag: 1.5.3
 
 Embed a beautiful PDF viewer into pages with a simple shortcode.
 
@@ -63,15 +63,18 @@ Works best in a [Roots Bedrock](https://roots.io/bedrock/) stack
 
 == Changelog ==
 
+= 1.5.3 =
+* fixed error in shortcode.php pdfjs_viewer_attributes() function where variable $attr_html not instantiated.
+
 = 1.5.2 =
-* return instead of echo within shortcode fucntion, fixing bug where it breaks out of container in WPBakery.
+* return instead of echo within shortcode function, fixing bug where it breaks out of container in WPBakery.
 
 = 1.5.1 =
 * Added wrapper div around shortcode output
 
 = 1.5.0 =
 * Added shortcode mapping for WPBakery Page Builder (Visual Composer)
-* Integrate media library with insert dialog with WPBakery Page Builder 
+* Integrate media library with insert dialog with WPBakery Page Builder
 
 = 1.4.3 =
 * better sanitization of html attributes for iframe

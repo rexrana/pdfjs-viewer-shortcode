@@ -108,6 +108,8 @@ function pdfjs_viewer_valid_css_length( string $str ) {
  */
 function pdfjs_viewer_attributes( $attributes ) {
 
+	$attr_html = '';
+
 	foreach ( $attributes as $attr => $val ) {
 		$attr_html .= ' ' . $attr . '="' . esc_attr( $val ) . '"';
 	}
