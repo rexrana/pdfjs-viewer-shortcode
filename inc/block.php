@@ -12,38 +12,38 @@ function crb_load() {
 add_action( 'carbon_fields_register_fields', 'block_testing_pdf_block' );
 function block_testing_pdf_block() {
 
-    Block::make( __( 'PDF embed' ) )
+    Block::make( __( 'PDF embed', 'pdfjs-viewer-shortcode' ) )
     ->add_fields( array(
 
-        Field::make( 'file', 'file', __( 'File' ) )
+        Field::make( 'file', 'file', __( 'File', 'pdfjs-viewer-shortcode' ) )
         ->set_type( array( 'application/pdf' ) ),
 
-        Field::make( 'text', 'width', __( 'Width' ) )
+        Field::make( 'text', 'width', __( 'Width', 'pdfjs-viewer-shortcode' ) )
         ->set_default_value( '100%' ),
 
-        Field::make( 'text', 'height', __( 'Height' ) )
+        Field::make( 'text', 'height', __( 'Height', 'pdfjs-viewer-shortcode' ) )
         ->set_default_value( '700px' ),
 
-        Field::make( 'checkbox', 'fullscreen', __( 'Enable Full Screen' ) )
+        Field::make( 'checkbox', 'fullscreen', __( 'Enable Full Screen', 'pdfjs-viewer-shortcode' ) )
         ->set_option_value( 'true' )
         ->set_default_value( 'true' ),
 
-        Field::make( 'checkbox', 'download', __( 'Enable Download' ) )
+        Field::make( 'checkbox', 'download', __( 'Enable Download', 'pdfjs-viewer-shortcode' ) )
         ->set_option_value( 'true' )
         ->set_default_value( 'true' ),
 
-        Field::make( 'checkbox', 'print', __( 'Enable Printing' ) )
+        Field::make( 'checkbox', 'print', __( 'Enable Printing', 'pdfjs-viewer-shortcode' ) )
         ->set_option_value( 'true' )
         ->set_default_value( 'true' ),
 
-        Field::make( 'checkbox', 'openfile', __( 'Enable Open file' ) )
+        Field::make( 'checkbox', 'openfile', __( 'Enable Open file', 'pdfjs-viewer-shortcode' ) )
         ->set_option_value( 'true' )
         ->set_default_value( 'true' ),
 
     ) )
     ->set_category( 'embed' )
     ->set_icon( 'media-document' )
-    ->set_description( __( 'Embed a PDF file.' ) )
+    ->set_description( __( 'Embed a PDF file.', 'pdfjs-viewer-shortcode' ) )
     ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
 
         $pdf_url = wp_get_attachment_url( $fields['file'] );

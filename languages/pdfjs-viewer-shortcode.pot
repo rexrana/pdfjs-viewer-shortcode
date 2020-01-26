@@ -1,15 +1,15 @@
-# Copyright (C) 2019 Rex Rana Design and Development Ltd.
+# Copyright (C) 2020 Rex Rana Design and Development Ltd.
 # This file is distributed under the GPLv2.
 msgid ""
 msgstr ""
-"Project-Id-Version: PDF.js viewer shortcode 1.5.3\n"
+"Project-Id-Version: PDF.js viewer (block and shortcode) 1.6.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/pdfjs-viewer-shortcode\n"
-"POT-Creation-Date: 2019-09-10 19:35:21+00:00\n"
+"POT-Creation-Date: 2020-01-26 21:15:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -24,6 +24,42 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
+
+#: inc/block.php:15
+msgid "PDF embed"
+msgstr ""
+
+#: inc/block.php:18
+msgid "File"
+msgstr ""
+
+#: inc/block.php:21 inc/vc-map.php:37
+msgid "Width"
+msgstr ""
+
+#: inc/block.php:24 inc/vc-map.php:51
+msgid "Height"
+msgstr ""
+
+#: inc/block.php:27
+msgid "Enable Full Screen"
+msgstr ""
+
+#: inc/block.php:31
+msgid "Enable Download"
+msgstr ""
+
+#: inc/block.php:35
+msgid "Enable Printing"
+msgstr ""
+
+#: inc/block.php:39
+msgid "Enable Open file"
+msgstr ""
+
+#: inc/block.php:46
+msgid "Embed a PDF file."
+msgstr ""
 
 #: inc/media-button.php:17
 msgid "Add PDF"
@@ -56,7 +92,7 @@ msgstr ""
 msgid "i.e. https://my-media-subdomain.example.com/pdf.js/web/viewer.html"
 msgstr ""
 
-#: inc/shortcode.php:77
+#: inc/shortcode.php:74
 msgid "View Fullscreen"
 msgstr ""
 
@@ -76,16 +112,8 @@ msgstr ""
 msgid "Choose a PDF file to embed"
 msgstr ""
 
-#: inc/vc-map.php:37
-msgid "Width"
-msgstr ""
-
 #: inc/vc-map.php:38
 msgid "Width of viewer i.e. 100%, 600px"
-msgstr ""
-
-#: inc/vc-map.php:51
-msgid "Height"
 msgstr ""
 
 #: inc/vc-map.php:53
@@ -108,8 +136,137 @@ msgstr ""
 msgid "Browse"
 msgstr ""
 
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:243
+msgid "The parent must be 'array', 'string' or 'null'."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:272
+msgid "The position of inner blocks must be 'above' or 'below'."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:290
+msgid "The template must be an 'array' or 'null'."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:308
+msgid "The template lock must be 'all', 'insert', 'false' or 'null'."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:326
+msgid "The allowed blocks must be an 'array' or 'null'."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:393
+msgid "'render_callback' is required for the blocks."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:397
+msgid "'render_callback' must be a callable."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Container/Container.php:727
+msgid "General"
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Container/Theme_Options_Container.php:207
+msgid "Settings saved."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Field/Footer_Scripts_Field.php:20
+msgid ""
+"If you need to add scripts to your footer (like Google Analytics tracking "
+"code), you should enter them in this box."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Field/Gravity_Form_Field.php:47
+msgid "No form"
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Field/Header_Scripts_Field.php:20
+msgid "If you need to add scripts to your header, you should enter them here."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:69
+msgid "Please enter a name for the sidebar."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:72
+msgid "Unknown action attempted."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:102
+msgid "Sidebar with the same ID is already registered."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:112
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:142
+msgid ""
+"Failed to update option storing your custom sidebars. Please contact "
+"support."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:137
+msgid "Sidebar not found."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:181
+msgid "Add Sidebar"
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:182
+msgid "Please enter the name of the new sidebar:"
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:183
+msgid "Are you sure you wish to remove this sidebar?"
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:368
+msgid "No option names provided"
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:379
+msgid "Theme Options updated."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:401
+msgid "Sorry, you are not allowed to read blocks of this post."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:411
+msgid "Sorry, you are not allowed to read blocks as this user."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:434
+msgid "The name of the block."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:439
+msgid "The content of the block."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:443
+msgid "ID of the post context."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:474
+msgid "Invalid block."
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/templates/Container/common/options-page.php:43
+msgid "Actions"
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/templates/Container/common/options-page.php:52
+msgid "Save Changes"
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/templates/Container/widget.php:4
+msgid "No options are available for this widget."
+msgstr ""
+
 #. Plugin Name of the plugin/theme
-msgid "PDF.js viewer shortcode"
+msgid "PDF.js viewer (block and shortcode)"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -117,7 +274,7 @@ msgid "https://github.com/rexrana/pdfjs-viewer-shortcode"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Embed PDFs with the gorgeous PDF.js viewer - based on Ben Lawson's version"
+msgid "Embed PDFs with the gorgeous PDF.js viewer via block editor or shortcode."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -126,4 +283,9 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "https://rexrana.ca/"
+msgstr ""
+
+#: vendor/htmlburger/carbon-fields/core/Field/Sidebar_Field.php:74
+msgctxt "sidebar"
+msgid "Add New"
 msgstr ""

@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name:     PDF.js viewer embed
+ * Plugin Name:     PDF.js viewer (block and shortcode)
  * Plugin URI:      https://github.com/rexrana/pdfjs-viewer-shortcode
  * Description:     Embed PDFs with the gorgeous PDF.js viewer via block editor or shortcode.
  * Author:          Rex Rana Design and Development Ltd.
  * Author URI:      https://rexrana.ca/
  * Text Domain:     pdfjs-viewer-shortcode
  * Domain Path:     /languages
- * Version:         1.6
+ * Version:         1.6.0
  * License:         GPLv2
  *
  * @package         Pdfjs_Viewer_Shortcode
