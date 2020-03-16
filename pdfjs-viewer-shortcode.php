@@ -7,7 +7,7 @@
  * Author URI:      https://rexrana.ca/
  * Text Domain:     pdfjs-viewer-shortcode
  * Domain Path:     /languages
- * Version:         1.6.0
+ * Version:         1.6.1
  * License:         GPLv2
  *
  * @package         Pdfjs_Viewer_Shortcode
@@ -17,8 +17,8 @@ define( 'PDFJS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'PDFJS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 // verify that local Composer autoloader exists
-if (file_exists(PDFJS_PLUGIN_DIR . 'vendor/autoload.php')) {
-	require_once(PDFJS_PLUGIN_DIR . 'vendor/autoload.php');
+if ( file_exists( PDFJS_PLUGIN_DIR . 'vendor/autoload.php' ) ) {
+	require_once PDFJS_PLUGIN_DIR . 'vendor/autoload.php';
 }
 
 require_once PDFJS_PLUGIN_DIR . 'inc/settings.php';
@@ -27,7 +27,7 @@ require_once PDFJS_PLUGIN_DIR . 'inc/shortcode.php';
 require_once PDFJS_PLUGIN_DIR . 'inc/media-button.php';
 
 // only load block if class found
-if( class_exists('Carbon_Fields\Container\Container') ) {
+if ( class_exists( 'Carbon_Fields\Container\Container' ) ) {
 	require_once PDFJS_PLUGIN_DIR . 'inc/block.php';
 }
 // load WPBakery support if it is present.
