@@ -16,8 +16,11 @@
 define( 'PDFJS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'PDFJS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
-// Composer autoloader
-require_once ( PDFJS_PLUGIN_DIR . 'vendor/autoload.php');
+// verify that local Composer autoloader exists
+if (file_exists(PDFJS_PLUGIN_DIR . 'vendor/autoload.php')) {
+    require_once(PDFJS_PLUGIN_DIR . 'vendor/autoload.php');
+}
+
 
 require_once PDFJS_PLUGIN_DIR . 'inc/settings.php';
 require_once PDFJS_PLUGIN_DIR . 'inc/misc.php';
