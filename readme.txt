@@ -3,7 +3,7 @@ Contributors: Peter Hebert
 Tags: pdf, pdf.js, viewer, reader, embed, mozilla, shortcode
 Requires at least: 3.0.1
 Tested up to: 5.3.2
-Stable tag: 1.6.0
+Stable tag: 1.6.2
 
 Embed a beautiful PDF viewer into pages with a simple shortcode.
 
@@ -62,6 +62,12 @@ Works best in a [Roots Bedrock](https://roots.io/bedrock/) stack
 == Screenshots ==
 
 == Changelog ==
+
+= 1.6.2 =
+* removed Carbon Fields plugin (only need as library)
+
+= 1.6.1 =
+* fixed Composer autoloader
 
 = 1.6.0 =
 * added gutenberg block via [Carbon Fields](https://docs.carbonfields.net/#/containers/gutenberg-blocks)
