@@ -4,142 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8fda885c306a901af97d647c422d3dfa",
+    "content-hash": "5a34968ab0fd0160336c6c6cecc722cd",
     "packages": [
         {
-            "name": "composer/installers",
-            "version": "v1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/installers.git",
-                "reference": "141b272484481432cda342727a427dc1e206bfa0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/141b272484481432cda342727a427dc1e206bfa0",
-                "reference": "141b272484481432cda342727a427dc1e206bfa0",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0"
-            },
-            "replace": {
-                "roundcube/plugin-installer": "*",
-                "shama/baton": "*"
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "^4.8.36"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Composer\\Installers\\Plugin",
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Installers\\": "src/Composer/Installers"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kyle Robinson Young",
-                    "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama"
-                }
-            ],
-            "description": "A multi-framework Composer library installer",
-            "homepage": "https://composer.github.io/installers/",
-            "keywords": [
-                "Craft",
-                "Dolibarr",
-                "Eliasis",
-                "Hurad",
-                "ImageCMS",
-                "Kanboard",
-                "Lan Management System",
-                "MODX Evo",
-                "Mautic",
-                "Maya",
-                "OXID",
-                "Plentymarkets",
-                "Porto",
-                "RadPHP",
-                "SMF",
-                "Thelia",
-                "Whmcs",
-                "WolfCMS",
-                "agl",
-                "aimeos",
-                "annotatecms",
-                "attogram",
-                "bitrix",
-                "cakephp",
-                "chef",
-                "cockpit",
-                "codeigniter",
-                "concrete5",
-                "croogo",
-                "dokuwiki",
-                "drupal",
-                "eZ Platform",
-                "elgg",
-                "expressionengine",
-                "fuelphp",
-                "grav",
-                "installer",
-                "itop",
-                "joomla",
-                "known",
-                "kohana",
-                "laravel",
-                "lavalite",
-                "lithium",
-                "magento",
-                "majima",
-                "mako",
-                "mediawiki",
-                "modulework",
-                "modx",
-                "moodle",
-                "osclass",
-                "phpbb",
-                "piwik",
-                "ppi",
-                "puppet",
-                "pxcms",
-                "reindex",
-                "roundcube",
-                "shopware",
-                "silverstripe",
-                "sydes",
-                "symfony",
-                "typo3",
-                "wordpress",
-                "yawik",
-                "zend",
-                "zikula"
-            ],
-            "time": "2019-08-12T15:00:31+00:00"
-        },
-        {
             "name": "htmlburger/carbon-fields",
-            "version": "v3.1.13",
+            "version": "v3.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "7e77390b5c9aa76df9db05caa555cb9ee4d0c826"
+                "reference": "ca5d111b7f8202446619e866e04be3b0f20ef7de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/7e77390b5c9aa76df9db05caa555cb9ee4d0c826",
-                "reference": "7e77390b5c9aa76df9db05caa555cb9ee4d0c826",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/ca5d111b7f8202446619e866e04be3b0f20ef7de",
+                "reference": "ca5d111b7f8202446619e866e04be3b0f20ef7de",
                 "shasum": ""
             },
             "require": {
@@ -259,46 +137,7 @@
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2020-01-23T14:01:49+00:00"
-        },
-        {
-            "name": "htmlburger/carbon-fields-plugin",
-            "version": "v3.1.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/htmlburger/carbon-fields-plugin.git",
-                "reference": "817bf819127ba142abfea33083d73d28b703b294"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields-plugin/zipball/817bf819127ba142abfea33083d73d28b703b294",
-                "reference": "817bf819127ba142abfea33083d73d28b703b294",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^1.0",
-                "htmlburger/carbon-fields": "3.1.13",
-                "php": ">=5.3"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "psr-4": {
-                    "Carbon_Fields_Plugin\\": "core/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "atanas-angelov-dev",
-                    "email": "atanas.angelov.dev@gmail.com"
-                }
-            ],
-            "description": "WordPress plugin loader for Carbon Fields.",
-            "homepage": "http://carbonfields.net/",
-            "time": "2020-01-23T14:15:59+00:00"
+            "time": "2020-02-10T13:53:53+00:00"
         }
     ],
     "packages-dev": [],
