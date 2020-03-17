@@ -63,11 +63,9 @@ Works best in a [Roots Bedrock](https://roots.io/bedrock/) stack
 
 ## Changelog ##
 
-### 1.6.2 ###
-* removed Carbon Fields plugin (only need as library)
-
 ### 1.6.1 ###
-* fixed Composer autoloader
+* removed Carbon Fields plugin (only need as library)
+* fixed Composer autoloading
 
 ### 1.6.0 ###
 * added gutenberg block via [Carbon Fields](https://docs.carbonfields.net/#/containers/gutenberg-blocks)
