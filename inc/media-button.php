@@ -8,15 +8,24 @@
  */
 
 /**
- * Add PDF button in Classic Editor
+ * Include the media button
  *
  * @return void
  */
 function pdfjs_media_button() {
-	?>
-	<a href="#" id="insert-pdfjs" class="button"><?php esc_html_e( 'Add PDF', 'pdfjs-viewer-shortcode' ); ?></a>
-	<?php
+	printf(
+		wp_kses(
+			// translators: Add PDF.
+			__( '<a href="#" class="button js-insert-pdfjs">%s</a>', 'pdfjs-viewer-shortcode' ),
+			array(
+				'a'     => array( 'href' => array() ),
+				'class' => array(),
+			)
+		),
+		'Add PDF'
+	);
 }
+// priority is 12 since default button is 10.
 add_action( 'media_buttons', 'pdfjs_media_button', 12 );
 
 /**
