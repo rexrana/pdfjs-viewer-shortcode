@@ -63,6 +63,10 @@ Works best in a [Roots Bedrock](https://roots.io/bedrock/) stack
 
 == Changelog ==
 
+= 1.6.2 =
+* Added Update URI plugin header to avoid overwriting / collisions with WordPress updater
+* proper sanitzing of insert pdf button for classic editor.
+
 = 1.6.1 =
 * removed Carbon Fields plugin (only need as library)
 * fixed Composer autoloading
