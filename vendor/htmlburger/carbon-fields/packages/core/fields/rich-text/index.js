@@ -9,7 +9,6 @@ import {
 	debounce
 } from 'lodash';
 import cx from 'classnames';
-import observe from 'observe-resize';
 
 class RichTextField extends Component {
 	/**
@@ -33,11 +32,23 @@ class RichTextField extends Component {
 		if ( this.props.visible ) {
 			this.timer = setTimeout( this.initEditor, 250 );
 
-			this.cancelObserver = observe( this.node.current, debounce( () => {
+			const resizeObserver = new ResizeObserver( debounce( () => {
 				if ( this.editor ) {
-					this.editor.execCommand( 'wpAutoResize' );
+					/**
+					 * On each call of the `wpAutoResize` method the global `wpActiveEditor` reference
+					 * is changed to the element that will be resized. In some cases this is causing
+					 * conflicts with other plugins so we need to preserve and restore the previously
+					 * referenced element.
+					 */
+					const activeEdtior = window.wpActiveEditor;
+					this.editor.execCommand( 'wpAutoResize', undefined, undefined, { skip_focus: true } );
+					window.wpActiveEditor = activeEdtior;
 				}
 			}, 100 ) );
+
+			resizeObserver.observe( this.node.current );
+
+			this.observer = resizeObserver;
 		}
 	}
 
@@ -49,8 +60,8 @@ class RichTextField extends Component {
 	componentWillUnmount() {
 		clearTimeout( this.timer );
 
-		if ( typeof this.cancelObserver !== 'undefined' ) {
-			this.cancelObserver();
+		if ( typeof this.observer !== 'undefined' ) {
+			this.observer.disconnect();
 		}
 
 		this.destroyEditor();
@@ -95,6 +106,8 @@ class RichTextField extends Component {
 			? template( field.media_buttons )( { id } )
 			: null;
 
+		const shouldRenderTabs = field.rich_editing && window.tinyMCEPreInit.qtInit[ field.settings_reference ];
+
 		return (
 			<div
 				id={ `wp-${ id }-wrap` }
@@ -107,7 +120,7 @@ class RichTextField extends Component {
 					</div>
 				) }
 
-				{ field.rich_editing && (
+				{ shouldRenderTabs && (
 					<div className="wp-editor-tabs">
 						<button type="button" id={ `${ id }-tmce` } className="wp-switch-editor switch-tmce" data-wp-editor-id={ id }>
 							{ __( 'Visual', 'carbon-fields-ui' ) }
@@ -141,7 +154,6 @@ class RichTextField extends Component {
 	 */
 	initEditor = () => {
 		const { id, field } = this.props;
-
 		if ( field.rich_editing ) {
 			const editorSetup = ( editor ) => {
 				this.editor = editor;
@@ -154,7 +166,7 @@ class RichTextField extends Component {
 			};
 
 			const editorOptions = {
-				...window.tinyMCEPreInit.mceInit.carbon_settings,
+				...window.tinyMCEPreInit.mceInit[ field.settings_reference ],
 				selector: `#${ id }`,
 				setup: editorSetup
 			};
@@ -162,15 +174,17 @@ class RichTextField extends Component {
 			window.tinymce.init( editorOptions );
 		}
 
-		const quickTagsOptions = {
-			...window.tinyMCEPreInit,
-			id
-		};
+		const quickTagsOptions = { ...window.tinyMCEPreInit.qtInit[ field.settings_reference ] };
 
-		window.quicktags( quickTagsOptions );
+		if ( quickTagsOptions ) {
+			const qtagInstance = window.quicktags( {
+				...quickTagsOptions,
+				id
+			} );
 
-		// Force the initialization of the quick tags.
-		window.QTags._buttonsInit();
+			// Force the initialization of the quick tags.
+			window.QTags._buttonsInit( qtagInstance.id );
+		}
 	}
 
 	/**
