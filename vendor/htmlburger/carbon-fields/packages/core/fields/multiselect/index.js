@@ -23,7 +23,7 @@ class MultiselectField extends Component {
 			onChange
 		} = this.props;
 
-		onChange( id, selected.map( ( item ) => item.value ) );
+		onChange( id, selected?.map( ( item ) => item.value ) ?? [] );
 	}
 
 	/**
@@ -35,7 +35,7 @@ class MultiselectField extends Component {
 	filterValues = ( values ) => {
 		const { field } = this.props;
 
-		return field.options.filter( ( option ) => values.indexOf( option.value ) > -1 );
+		return values.map( ( value ) => field.options.find( ( option ) => option.value === value ) );
 	}
 
 	/**
