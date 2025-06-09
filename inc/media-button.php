@@ -16,10 +16,13 @@ function pdfjs_media_button() {
 	printf(
 		wp_kses(
 			// translators: Add PDF.
-			__( '<a href="#" class="button js-insert-pdfjs">%s</a>', 'pdfjs-viewer-shortcode' ),
+			__( '<a href="#" class="button js-insert-pdfjs" id="insert-pdfjs">%s</a>', 'pdfjs-viewer-shortcode' ),
 			array(
-				'a'     => array( 'href' => array() ),
-				'class' => array(),
+				'a' => array( 
+					'href' => array(),
+					'class' => array(),
+					'id' => array(),
+				),
 			)
 		),
 		'Add PDF'
