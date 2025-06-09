@@ -1,6 +1,6 @@
 {
   "name": "pdfjs-viewer-shortcode",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "main": "Gruntfile.js",
   "author": "Peter Hebert <peter@rexrana.ca>",
   "devDependencies": {
