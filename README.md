@@ -1,9 +1,9 @@
 # PDF.js Viewer Shortcode #
-**Contributors:** Peter Hebert  
+**Contributors:** [peterhebert](https://profiles.wordpress.org/peterhebert/), [mediaformat](https://profiles.wordpress.org/mediaformat/)  
 **Tags:** pdf, pdf.js, viewer, reader, embed, mozilla, shortcode  
 **Requires at least:** 3.0.1  
 **Tested up to:** 5.3.2  
-**Stable tag:** 1.6.2  
+**Stable tag:** 1.6.3  
 
 Embed a beautiful PDF viewer into pages with a simple shortcode.
 
@@ -62,6 +62,9 @@ Works best in a [Roots Bedrock](https://roots.io/bedrock/) stack
 ## Screenshots ##
 
 ## Changelog ##
+
+### 1.6.3 ###
+* Updated dependency: Carbon Fields.
 
 ### 1.6.2 ###
 * Added Update URI plugin header to avoid overwriting / collisions with WordPress updater
