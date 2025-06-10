@@ -8,7 +8,7 @@
  * Author URI:      https://rexrana.ca/
  * Text Domain:     pdfjs-viewer-shortcode
  * Domain Path:     /languages
- * Version:         1.6.4
+ * Version:         1.6.5
  * License:         GPL-3.0-or-later
  *
  * @package         Pdfjs_Viewer_Shortcode
@@ -17,12 +17,12 @@
 define( 'PDFJS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'PDFJS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
-// verify that local Composer autoloader exists
+// local Composer autoloader (if not using Composer within Bedrock stack).
 
 $autoload_path = __DIR__ . '/vendor/autoload.php';
 
 if ( file_exists( $autoload_path ) ) {
-    require_once( $autoload_path );
+	require_once $autoload_path;
 }
 
 require_once PDFJS_PLUGIN_DIR . 'inc/settings.php';

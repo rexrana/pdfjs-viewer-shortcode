@@ -31,7 +31,7 @@ module.exports = function( grunt ) {
 			target: {
 				options: {
 					domainPath: '/languages',
-					exclude: [ '\.git/*', 'bin/*', 'node_modules/*', 'tests/*' ],
+					exclude: [ '\.git/*', 'bin/*', 'vendor/*', 'node_modules/*', 'tests/*' ],
 					mainFile: 'pdfjs-viewer-shortcode.php',
 					potFilename: 'pdfjs-viewer-shortcode.pot',
 					potHeaders: {
