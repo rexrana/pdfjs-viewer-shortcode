@@ -2,7 +2,7 @@
     "name": "rexrana/pdfjs-viewer-shortcode",
     "description": "Embed PDFs with the gorgeous PDF.js viewer",
     "type": "wordpress-plugin",
-    "license": "GPL",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Peter Hebert",
