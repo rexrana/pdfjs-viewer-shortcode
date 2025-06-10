@@ -1,5 +1,5 @@
 === PDF.js Viewer Shortcode ===
-Contributors: Peter Hebert
+Contributors: peterhebert, mediaformat
 Tags: pdf, pdf.js, viewer, reader, embed, mozilla, shortcode
 Requires at least: 3.0.1
 Tested up to: 5.3.2
